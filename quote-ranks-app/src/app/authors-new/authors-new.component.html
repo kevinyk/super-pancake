@@ -1,0 +1,7 @@
+<a [routerLink]="['/']">Home</a>
+<h4>Add a new author:</h4>
+<p *ngFor="let error of errors">{{error}}</p>
+<form (submit)="addAuthor()">
+  <input type="text" name="name" [(ngModel)]="newAuthor.name">
+  <input type="submit">
+</form>

@@ -1,0 +1,9 @@
+<a [routerLink]="['/']">Home</a>
+
+<h4>Provide a quote by {{author.name}}</h4>
+<p *ngFor="let error of errors">{{error}}</p>
+<form (submit)="addQuote()">
+  <input type="text" name="content" [(ngModel)]="quote.content">
+  <input type="submit">
+  <button [routerLink]="['/quotes', author._id]">Cancel</button>
+</form>
